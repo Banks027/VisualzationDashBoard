@@ -55,7 +55,7 @@ if __name__ == "__main__":
     file_path = Path("C:/Users/Viv/Documents/Career readiness/internships/IDX exchange/csv")
 
     for prefix in ("CRMLSListing", "CRMLSSold"):
-        column = -1
+        column = -1 #allows for Property type column be located in any column
 
         match prefix:
             case "CRMLSListing":
