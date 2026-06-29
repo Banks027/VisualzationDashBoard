@@ -4,7 +4,7 @@
     Numpy & pandas installation into Phython IDE environment.
 
     Use `pip install numpy pandas`
-    Several iles with CRMLSListing20YYMM.csv & CRMLSSold20YYMM.csv
+    Several files with CRMLSListing20YYMM.csv & CRMLSSold20YYMM.csv
 
 ##Directions: 
     Press the run button for your corresponding IDE
