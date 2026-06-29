@@ -10,6 +10,7 @@ START_YEAR = 2024
 START_MONTH = 1
 PROPERTY_FILTER = "Residential"
 PERCENTILES = (10, 25, 50, 75, 90)
+TERMINAL_FLOAT_FORMAT = lambda value: f"{value:,.6f}"
 
 
 # Reporting rules:
@@ -231,11 +232,11 @@ def build_report(file_name, frame, filtered_frame):
 
     report_frame = pd.DataFrame(report_rows)
     print("\nNull-count summary table:")
-    print(null_summary.to_string(index=False))
+    print(null_summary.to_string(index=False, float_format=TERMINAL_FLOAT_FORMAT))
     print("\nMissing value report (columns above 90% null):")
-    print(missing_value_report.to_string(index=False))
+    print(missing_value_report.to_string(index=False, float_format=TERMINAL_FLOAT_FORMAT))
     print("\nNumeric distribution summary:")
-    print(numeric_summary.to_string(index=False))
+    print(numeric_summary.to_string(index=False, float_format=TERMINAL_FLOAT_FORMAT))
     return report_frame
 
 
